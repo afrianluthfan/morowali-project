@@ -1,9 +1,7 @@
 <template>
   <div v-if="userRole === 'Admin'">
     <nav class="sidebar-admin">
-      <button class="toggle-btn">
-        &#9776; Toggle Sidebar
-      </button>
+      <button class="toggle-btn">&#9776; Toggle Sidebar</button>
       <div class="sidebar-content">
         <router-link to="/beranda-admin" class="sidebar-item"
           >Dashboard</router-link
@@ -14,7 +12,7 @@
       </div>
 
       <div>
-        <button @click="clearLocalStorage"> LOG OUT</button>
+        <button @click="clearLocalStorage">LOG OUT</button>
       </div>
     </nav>
   </div>
@@ -152,8 +150,8 @@ export default {
   methods: {
     clearLocalStorage() {
       localStorage.clear();
-      console.log('Localstorage dibersihin!');
-      this.userRole = ""
+      console.log("Localstorage dibersihin!");
+      this.userRole = "";
       location.reload();
     },
 
@@ -245,8 +243,8 @@ export default {
 }
 
 .sidebar-admin {
-  background-color: #343a40; 
-  padding-top: 56px; 
+  background-color: #343a40;
+  padding-top: 56px;
   height: 100vh;
   position: fixed;
   top: 0;
